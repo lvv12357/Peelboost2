@@ -3,7 +3,7 @@
 #"peeling" denotes peeling methods "MP" or "WMP", "formula" takes standard formula input, "coeflearn" takes input "Breiman" (used in the thesis and peeling article) "Freund" and "Zhu"
 #This function is inspired by the original boosting() function of the adabag package and repeats the original function based on the resulting noise criteria
 
-PeelBoost<- function (formula, data, mfinal1 = 10, mfinal2 = 200, coeflearn = "Breiman", 
+PeelBoost<- function (formula, data, mfinal1 = 10, mfinal2 = 100, coeflearn = "Breiman", 
                          control, peeling = "MP", wl=0.5 , ...) 
 {
   if (!(as.character(coeflearn) %in% c("Freund", "Breiman", 
